@@ -6,8 +6,7 @@ export default function Input(props){
     const [date, setDate] = useState("")
 
     const handleSubmit = () => {
-        console.log(date)
-        props.addTask(input, date)
+        input ? props.addTask(input, date) : alert("You cannot add an empty task!")
     }
 
     return (
